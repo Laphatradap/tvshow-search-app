@@ -1,6 +1,6 @@
 import { combineReducers } from "redux";
-import showReducer from "./show/reducer";
-import episodeReducer from "./episode/reducer"
+import showReducer from "./shows/reducer";
+import episodeReducer from "./episodes/reducer"
 
 export default combineReducers({
   shows: showReducer,

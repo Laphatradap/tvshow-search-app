@@ -1,1 +1,0 @@
-export const getEpisodeList = state => state.episodes

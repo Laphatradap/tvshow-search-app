@@ -8,7 +8,7 @@ export const tvshowsFetched = (shows) => {
 };
 
 export const fetchTVShows = () => async (dispatch) => {
-  await API.get(`/search/shows`, {
+  await API.get(`search/shows`, {
     params: {
       q: "girls",
     },

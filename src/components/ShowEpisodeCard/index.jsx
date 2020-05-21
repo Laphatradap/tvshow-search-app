@@ -8,7 +8,7 @@ const ShowEpisodeCard = (props) => {
     <div key={id}>
       <h1>{title}</h1>
       <Link to={`/shows/${id}`}>
-        <img src={img} alt="Show Poster" />
+        <img src={img} alt="poster" />
       </Link>
       <div dangerouslySetInnerHTML={{ __html: description }}></div>
     </div>

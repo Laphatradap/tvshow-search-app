@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchTVShows } from "../../store/show/actions";
-import { getTVShows } from "../../store/show/selectors";
-import ShowEpisodeCard from "../ShowEpisodeCard";
+import { fetchTVShows } from "../../store/shows/actions";
+import { getTVShows } from "../../store/shows/selectors";
+import EpisodeListContainer from "../EpisodeListContainer";
 
 const ShowContainer = () => {
   const dispatch = useDispatch();
@@ -14,18 +14,22 @@ const ShowContainer = () => {
 
   if (!tvshows) return "Loading...";
 
-  const renderShows = (tvshows, CardComponent) => {
-    return tvshows.map((show) => (
-      <CardComponent
-        key={show.show.id}
-        id={show.show.id}
-        title={show.show.name}
-        img={show.show.image.medium}
-        description={show.show.summary}
-      />
-    ));
-  };
-
-  return <div>{renderShows(tvshows, ShowEpisodeCard)}</div>;
+  return (
+    <div>
+      {tvshows.map((show) => (
+        <div key={show.show.id}>
+          <h1>{show.show.name}</h1>
+          <img src={show.show.image.medium} alt="showPoster" />
+          <div dangerouslySetInnerHTML={{ __html: show.show.summary }}></div>
+          <a href={show.show.officialSite}>{show.show.officialSite}</a>
+          <br></br>
+            <div>Average rating: {show.show.rating.average}</div>
+          <div>
+            <EpisodeListContainer showId={show.show.id} />
+          </div>
+        </div>
+      ))}
+    </div>
+  );
 };
 export default ShowContainer;

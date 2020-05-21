@@ -10,7 +10,7 @@ export const episodesFetched = (episodes) => {
 export const fetchEpisodes = (showId) => async (dispatch) => {
   await API.get(`/shows/${showId}/episodes`)
     .then((res) => {
-      dispatch(episodesFetched(res.data));
+      dispatch(episodesFetched({ data: res.data, showId }));
     })
     .catch(console.error);
 };
