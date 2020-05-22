@@ -14,3 +14,21 @@ export const fetchEpisodes = (showId) => async (dispatch) => {
     })
     .catch(console.error);
 };
+
+
+// https://api.tvmaze.com/episodes/1
+
+// export const episodeFetched = (episode) => {
+//   return {
+//     type: "EPISODE_FETCHED",
+//     episode,
+//   };
+// };
+
+// export const fetchEpisode = (episodeId) => async (dispatch) => {
+//   await API.get(`/episodes/${episodeId}`)
+//     .then((res) => {
+//       dispatch(episodeFetched(res.data));
+//     })
+//     .catch(console.error);
+// };
