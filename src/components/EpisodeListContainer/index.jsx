@@ -3,25 +3,23 @@ import { useDispatch, useSelector } from "react-redux";
 import { getEpisodes } from "../../store/episodes/selectors";
 import { fetchEpisodes } from "../../store/episodes/actions";
 import { useHistory } from "react-router-dom";
-// import ShowEpisodeCard from "../ShowEpisodeCard";
 
 const EpisodeListContainer = (props) => {
   const {showId} = props;
   const dispatch = useDispatch();
-  const episodes = useSelector(getEpisodes);
+  const episodeList = useSelector(getEpisodes);
   const history = useHistory();
 
   useEffect(() => {
     dispatch(fetchEpisodes(showId));
   }, [dispatch]);
 
-  if (!episodes) return "Loading...";
+  if (!episodeList) return "Loading...";
 
-  const episodeData = episodes.find((e) => e.showId === showId);
+  const episodeData = episodeList.find((e) => e.showId === showId);
   if (!episodeData) return "Loading..";
 
   const groupData = episodeData.data.map((episode) => episode);
-  console.log("OUTPUT: EpisodeListContainer -> groupData", groupData);
 
   const groupBySeason = groupData.reduce((r, a) => {
     r[a.season] = [...(r[a.season] || []), a];
@@ -36,13 +34,13 @@ const EpisodeListContainer = (props) => {
           {value.map((v) => (
             <div key={v.id} onClick={() => history.push(`/episode/${v.id}`)}>
               <div>{v.name}</div>
-              <>
+              {/* <>
                 {!v.image ? (
                   <div>No Photo Found!</div>
                 ) : (
                   <img src={v.image.medium} alt="showposter" />
                 )}
-              </>
+              </> */}
             </div>
           ))}
         </>
