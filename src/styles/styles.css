@@ -1,0 +1,110 @@
+.showlist-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 0;
+  margin: 0;
+}
+
+.card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  background-color: white;
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  margin: 1em auto;
+}
+
+.episode-container {
+  background-color: green;
+  padding: 20px;
+  margin: 1em auto;
+  border-radius: 15px;
+  -webkit-box-shadow: 0 10px 30px grey;
+          box-shadow: 0 10px 30px grey;
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.Header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  margin: 0 auto;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  color: red;
+  padding: 0;
+}
+
+body {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100vw;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+  font-family: 'Gotham-Book','Helvetica Neue','Helvetica','Arial','sans-serif';
+  font-size: 1.5rem;
+  color: rgba(255, 255, 255, 0.7);
+  background-color: #111;
+  letter-spacing: -.25px;
+  line-height: 1.4;
+}
+
+@media (min-width: 576px) {
+  body {
+    font-size: 1.3rem;
+  }
+}
+
+body a {
+  color: white;
+  -webkit-text-decoration: solid;
+          text-decoration: solid;
+}
+
+body a:hover {
+  color: red;
+}
+
+body .active-link {
+  color: red;
+}
+
+body ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+body .suggestion:hover {
+  background-color: red;
+}
+/*# sourceMappingURL=styles.css.map */

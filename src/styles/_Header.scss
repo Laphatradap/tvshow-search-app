@@ -1,0 +1,17 @@
+@import "./variables";
+
+.Header {
+  display: flex;
+  justify-content: flex-start;
+  margin: 0 auto;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  // font-size: 0.5rem;
+  color: red;
+
+  // @media screen and (max-width: 601px) {
+  //   margin-bottom: 2em;
+  // }
+
+  padding: 0;
+}
