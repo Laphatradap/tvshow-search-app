@@ -4,7 +4,7 @@ import { getTVShows } from "../../store/shows/selectors";
 import EpisodeListContainer from "../EpisodeListContainer";
 import { useParams } from "react-router-dom";
 
-import ShowCard from "./ShowCard";
+// import ShowCard from "./ShowCard";
 const ShowContainer = () => {
   const params = useParams();
   const showId = parseInt(params.id);
@@ -15,23 +15,48 @@ const ShowContainer = () => {
     .map((show) => show.show)
     .find((item) => item.id === showId);
 
-  const renderShow = (showData, CardComponent) => {
-    return (
-      <CardComponent
-        key={showData.id}
-        id={showData.id}
-        title={showData.name}
-        img={showData.image.medium}
-        summary={showData.summary}
-        rating={showData.rating.average}
-      />
-    );
-  };
+  // const renderShow = (showData, CardComponent) => {
+  //   return (
+  //     <CardComponent
+  //       key={showData.id}
+  //       id={showData.id}
+  //       title={showData.name}
+  //       img={showData.image.medium}
+  //       summary={showData.summary}
+  //       rating={showData.rating.average}
+  //     />
+  //   );
+  // };
 
   return (
-    <div className="">
-      {renderShow(showData, ShowCard)}
-      <EpisodeListContainer showId={showData.id} />
+    <div className="showCard-container">
+      <div>
+        {" "}
+        {!showData.image ? (
+          <div>No Photo!</div>
+        ) : (
+          <img
+            src={showData.image.original}
+            alt="showposter"
+            className="image"
+          />
+        )}
+      </div>
+      <div className="title">{showData.name}</div>
+      <div className="showInfo">
+        {showData.language}
+        {" | "}
+        {showData.genres.map((genre) => (
+          <span key={showData.id}>{genre} </span>
+        ))}
+      </div>
+      <div
+        className="description"
+        dangerouslySetInnerHTML={{ __html: showData.summary }}
+      ></div>
+      <div>
+        <EpisodeListContainer showId={showData.id} />
+      </div>
     </div>
   );
 };

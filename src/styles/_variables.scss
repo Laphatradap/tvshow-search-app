@@ -6,6 +6,10 @@ $textColor: white;
 $mainColor: red;
 $backgroundColor: #111;
 
+// Grid system
+$grid-columns: 12;
+$grid-max-width: 1200px;
+
 @mixin border($maicolor) {
   border: 1px solid map-get($colors, backgroundColor);
   box-shadow: 0 0 8px 2px rgb(231, 231, 231);

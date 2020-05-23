@@ -1,4 +1,6 @@
 .showlist-container {
+  width: 100%;
+  margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -6,46 +8,81 @@
   -webkit-box-direction: normal;
       -ms-flex-flow: row wrap;
           flex-flow: row wrap;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   padding: 0;
-  margin: 0;
+  overflow: hidden;
+  overflow-y: hidden;
 }
 
-.card {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  background-color: white;
-  padding: 0;
-  margin: 0;
+@media (min-width: 992px) {
+  .showlist-container {
+    max-width: 1200px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    margin: 0 auto;
+  }
 }
 
-.container {
-  margin: 1em auto;
-}
-
-.episode-container {
-  background-color: green;
+.showCard-container {
   padding: 20px;
-  margin: 1em auto;
-  border-radius: 15px;
-  -webkit-box-shadow: 0 10px 30px grey;
-          box-shadow: 0 10px 30px grey;
-  width: 80%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  display: block;
+  margin: 0 auto;
+}
+
+.showCard-container .title {
+  text-transform: uppercase;
+  font-weight: bolder;
+  font-size: 1.5rem;
+  padding: 20px;
+  display: block;
+}
+
+.showCard-container .showInfo {
+  font-size: 1.1rem;
+  display: block;
+}
+
+.showCard-container .image {
+  border-radius: 2px;
+  max-width: 100%;
+  height: auto;
+}
+
+@media (min-width: 992px) {
+  .showCard-container .image {
+    height: auto;
+    width: 550px;
+  }
+}
+
+@media (min-width: 768px) {
+  .showCard-container .image {
+    height: auto;
+    width: 250px;
+  }
+}
+
+.showCard-container .description {
+  font-size: 1.1rem;
+  text-align: left;
+  display: block;
+}
+
+@media (min-width: 992px) {
+  .showCard-container .description {
+    width: 1000px;
+    display: inline-block;
+  }
 }
 
 .Header {
@@ -65,12 +102,12 @@
 body {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  width: 100vw;
-  max-width: 1200px;
+  width: auto !important;
+  overflow-x: hidden !important;
   margin: 0 auto;
   padding: 20px;
   text-align: center;
-  font-family: 'Gotham-Book','Helvetica Neue','Helvetica','Arial','sans-serif';
+  font-family: 'Gotham-Book', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif';
   font-size: 1.5rem;
   color: rgba(255, 255, 255, 0.7);
   background-color: #111;

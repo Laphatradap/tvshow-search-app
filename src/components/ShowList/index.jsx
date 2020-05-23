@@ -8,7 +8,7 @@ const ShowListContainer = () => {
   const dispatch = useDispatch();
   const tvshows = useSelector(getTVShows);
   const history = useHistory();
-  
+
   useEffect(() => {
     dispatch(fetchTVShows());
   }, [dispatch]);
@@ -18,14 +18,17 @@ const ShowListContainer = () => {
   return (
     <div className="showlist-container">
       {tvshows.map((show) => (
-        <div key={show.show.id} onClick={() => history.push(`/show/${show.show.id}`)}>
-          <>
-            {!show.show.image ? (
+        <div
+          key={show.show.id}
+          onClick={() => history.push(`/show/${show.show.id}`)}
+        >
+          <div>
+          {!show.show.image ? (
               <div>No Photo!</div>
             ) : (
               <img src={show.show.image.medium} alt="showposter" />
             )}
-          </>
+          </div>
         </div>
       ))}
     </div>
