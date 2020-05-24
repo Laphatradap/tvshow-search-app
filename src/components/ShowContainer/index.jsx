@@ -39,6 +39,8 @@ const ShowContainer = () => {
             src={showData.image.original}
             alt="showposter"
             className="image"
+            height="115px"
+            width="169px"
           />
         )}
       </div>
