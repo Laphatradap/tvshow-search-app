@@ -1,34 +1,20 @@
-import API from "../../api";
+import { apiUrl } from "../../config/constants";
+import axios from "axios";
 
-export const episodesFetched = (episodes) => {
+export const fetchEpisodesSuccess = (episodes) => {
   return {
-    type: "EPISODES_FETCHED",
+    type: "FETCH_EPISODES_SUCESS",
     episodes,
   };
 };
 
 export const fetchEpisodes = (showId) => async (dispatch) => {
-  await API.get(`/shows/${showId}/episodes`)
+  await axios
+    .get(`${apiUrl}/shows/${showId}/episodes`)
     .then((res) => {
-      dispatch(episodesFetched({ data: res.data, showId }));
+      dispatch(fetchEpisodesSuccess({ data: res.data, showId }));
+      console.log("res episode", res.data)
     })
     .catch(console.error);
 };
 
-
-// https://api.tvmaze.com/episodes/1
-
-// export const episodeFetched = (episode) => {
-//   return {
-//     type: "EPISODE_FETCHED",
-//     episode,
-//   };
-// };
-
-// export const fetchEpisode = (episodeId) => async (dispatch) => {
-//   await API.get(`/episodes/${episodeId}`)
-//     .then((res) => {
-//       dispatch(episodeFetched(res.data));
-//     })
-//     .catch(console.error);
-// };

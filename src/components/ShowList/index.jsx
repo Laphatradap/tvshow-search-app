@@ -8,11 +8,11 @@ const ShowListContainer = () => {
   const dispatch = useDispatch();
   const tvshows = useSelector(getTVShows);
   const history = useHistory();
-
+  
   useEffect(() => {
     dispatch(fetchTVShows());
   }, [dispatch]);
-
+  
   if (!tvshows) return "Loading...";
 
   return (
@@ -31,6 +31,12 @@ const ShowListContainer = () => {
           </div>
         </div>
       ))}
+      {/* {!tvshows.image ? (
+        <div>no</div>
+      ) : (
+        <img src={tvshows[0].image.medium} alt="showposter" />
+      )
+    } */}
     </div>
   );
 };

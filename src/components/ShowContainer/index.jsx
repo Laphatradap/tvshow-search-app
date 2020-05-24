@@ -9,8 +9,9 @@ const ShowContainer = () => {
   const params = useParams();
   const showId = parseInt(params.id);
   const tvshows = useSelector(getTVShows);
-
+  
   if (!tvshows) return "Loading...";
+
   const showData = tvshows
     .map((show) => show.show)
     .find((item) => item.id === showId);
