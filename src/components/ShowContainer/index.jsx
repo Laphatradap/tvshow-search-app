@@ -11,6 +11,7 @@ const ShowContainer = () => {
   const tvshows = useSelector(getTVShows);
 
   if (!tvshows) return "Loading...";
+
   const showData = tvshows
     .map((show) => show.show)
     .find((item) => item.id === showId);
@@ -29,28 +30,32 @@ const ShowContainer = () => {
   // };
 
   return (
-    <div className="showCard-container">
-      <div>
-        {" "}
-        {!showData.image ? (
-          <div>No Photo!</div>
-        ) : (
-          <img
-            src={showData.image.original}
-            alt="showposter"
-            className="image"
-            height="115px"
-            width="169px"
-          />
-        )}
-      </div>
-      <div className="title">{showData.name}</div>
-      <div className="showInfo">
-        {showData.language}
-        {" | "}
-        {showData.genres.map((genre) => (
-          <span key={showData.id}>{genre} </span>
-        ))}
+    <div>
+      <div className="container">
+        <div className="image-wrapper">
+          {" "}
+          {!showData.image ? (
+            <div>No Photo!</div>
+          ) : (
+            <img
+              src={showData.image.medium}
+              alt="showposter"
+              // className="container__image"
+              // height="115px"
+              // width="169px"
+            />
+          )}
+        </div>
+        <div className="text-wrapper">
+          <div className="title">{showData.name}</div>
+          <div className="details">
+            {showData.language}
+            {" | "}
+            {showData.genres.map((genre) => (
+              <span key={showData.id}>{genre} </span>
+            ))}
+          </div>
+        </div>
       </div>
       <div
         className="description"

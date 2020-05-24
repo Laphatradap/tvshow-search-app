@@ -2,7 +2,7 @@ const initialState = [];
 
 export default function episodeReducer(state = initialState, action) {
   switch (action.type) {
-    case "EPISODES_FETCHED":
+    case "FETCH_EPISODES_SUCESS":
       return [...state, action.episodes];
       
     default:
