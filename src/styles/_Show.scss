@@ -1,0 +1,76 @@
+@import "./variables";
+@import "./breakpoints";
+@import "./mixins";
+
+.showlist-container {
+  @include lg {
+    max-width: $screen-xl-min;
+    // background-color: orange;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    margin: 0 auto;
+  }
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  padding: 0;
+  // background-color: green;
+  overflow: hidden;
+  overflow-y: hidden;
+}
+
+.showCard-container {
+  // background-color: grey;
+  padding: 20px;
+  display: block;
+  margin: 0 auto;
+
+  .title {
+    text-transform: uppercase;
+    font-weight: bolder;
+    font-size: 1.5rem;
+    // text-align: left;
+    padding: 20px;
+    display: block;
+    // background-color: green;
+  }
+
+  .showInfo {
+    // background-color: lightcoral;
+    font-size: 1.1rem;
+    display: block;
+    // padding: 20px;
+  }
+
+  .image {
+    @include lg {
+    height: auto;
+    width: 550px;
+    }
+  
+    @include md {
+      height: auto;
+      width: 250px
+    }
+    // float: left;
+    // padding-inline-end: 10px;
+    border-radius: 2px;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .description {
+    font-size: 1.1rem;
+    text-align: left;
+    display: block;
+    // padding: 20px;
+    @include lg {
+      width: 1000px;
+      display: inline-block;
+      ;
+    }
+  }
+}

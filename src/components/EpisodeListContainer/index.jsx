@@ -5,7 +5,7 @@ import { fetchEpisodes } from "../../store/episodes/actions";
 import { useHistory } from "react-router-dom";
 
 const EpisodeListContainer = (props) => {
-  const {showId} = props;
+  const { showId } = props;
   const dispatch = useDispatch();
   const episodeList = useSelector(getEpisodes);
   const history = useHistory();
@@ -28,19 +28,19 @@ const EpisodeListContainer = (props) => {
 
   const renderSeasons = Object.entries(groupBySeason).map(([key, value], i) => {
     return (
-      <div key={key}>
+      <div key={key} >
         <h4>Season {key}</h4>
         <>
           {value.map((v) => (
             <div key={v.id} onClick={() => history.push(`/episode/${v.id}`)}>
               <div>{v.name}</div>
-              {/* <>
+              <>
                 {!v.image ? (
                   <div>No Photo Found!</div>
                 ) : (
                   <img src={v.image.medium} alt="showposter" />
                 )}
-              </> */}
+              </>
             </div>
           ))}
         </>
@@ -48,11 +48,6 @@ const EpisodeListContainer = (props) => {
     );
   });
 
-  return (
-    <div>
-      <h2>Episodes:</h2>
-      <div>{renderSeasons}</div>
-    </div>
-  );
+  return <div>{renderSeasons}</div>;
 };
 export default EpisodeListContainer;
