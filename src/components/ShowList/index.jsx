@@ -8,35 +8,31 @@ const ShowListContainer = () => {
   const dispatch = useDispatch();
   const tvshows = useSelector(getTVShows);
   const history = useHistory();
-  
+
   useEffect(() => {
-    dispatch(fetchTVShows());
+    dispatch(fetchTVShows("powerpuff girls"));
   }, [dispatch]);
-  
+
   if (!tvshows) return "Loading...";
 
   return (
-    <div className="showlist-container">
-      {tvshows.map((show) => (
-        <div
-          key={show.show.id}
-          onClick={() => history.push(`/show/${show.show.id}`)}
-        >
-          <div>
-          {!show.show.image ? (
-              <div>No Photo!</div>
-            ) : (
-              <img src={show.show.image.medium} alt="showposter" />
-            )}
+    <div>
+      <div className="showlist-container">
+        {tvshows.map((show) => (
+          <div
+            key={show.show.id}
+            onClick={() => history.push(`/show/${show.show.id}`)}
+          >
+            <div>
+              {!show.show.image ? (
+                <div>No Photo!</div>
+              ) : (
+                <img src={show.show.image.medium} alt="showposter" />
+              )}
+            </div>
           </div>
-        </div>
-      ))}
-      {/* {!tvshows.image ? (
-        <div>no</div>
-      ) : (
-        <img src={tvshows[0].image.medium} alt="showposter" />
-      )
-    } */}
+        ))}
+      </div>
     </div>
   );
 };

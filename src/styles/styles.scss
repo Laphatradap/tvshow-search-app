@@ -1,23 +1,15 @@
 @import "./variables";
 @import "./breakpoints";
 @import "./mixins";
-@import "./grid";
-
 @import "./Show";
 @import "./EpisodeList";
-@import "./Header";
+@import "./EpisodeDetails";
+@import "./NavBar";
+@import "./SearchBox";
 
 body {
   @include sm {
     font-size: 1.3rem;
-    // max-width: 20px;
-    // overflow: hidden;
-    // // overflow-x: visible;
-    // // overflow-y: visible;
-    // position: relative;
-    // padding-left: 0;
-    // overflow: hidden;
-    // background-color: purple;
 
   }
 
@@ -31,14 +23,6 @@ body {
 
   }
 
-  // @media screen and (min-width: 601px) {
-  // }
-
-
-
-  // @media screen and (max-width: 600px) {
-  //   font-size: 1em;
-  // }
 
   flex-wrap: wrap;
   width: auto !important;
@@ -83,7 +67,7 @@ body {
   }
 
   .header {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     font-weight: bolder;
     display: flex;
     justify-content: flex-start;

@@ -1,17 +1,9 @@
-// $colors: (textColor: white,
-//   mainColor: red,
-//   backgroundColor:black,
-// );
 $textColor: white;
 $mainColor: red;
 $secondColor: blue;
 $backgroundColor: #111;
 
-// Grid system
-$grid-columns: 12;
-$grid-max-width: 1200px;
-
-@mixin border($maicolor) {
+@mixin border($maincolor) {
   border: 1px solid map-get($colors, backgroundColor);
   box-shadow: 0 0 8px 2px rgb(231, 231, 231);
 }

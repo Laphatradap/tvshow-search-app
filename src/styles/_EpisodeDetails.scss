@@ -1,0 +1,55 @@
+@import "./variables";
+@import "./breakpoints";
+@import "./mixins";
+
+.episode-container {
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 10%;
+  padding-top: 50px;
+
+  @include md {
+    max-width: $screen-lg-min;
+    display: flex;
+    justify-content: flex-start;
+    margin: 0 auto;
+    padding-top: 50px;    
+  }
+
+  .episode-title {
+    font-size: 1.2rem;
+    font-weight: bolder;
+    padding-top: 30px;
+    text-align: center;
+
+    @include md {
+      max-width: $screen-lg-min;
+      font-size: 1.1rem;
+      padding-top: 50px;
+      padding-bottom: 10px;
+      align-self: left;
+      flex: 4 0 0%;
+      align-content: flex-start;
+    }
+
+  }
+
+  .episode-image-wrapper {
+    padding: 20px;
+    transition: transform .2s;
+    margin: 0 auto;
+
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+
+  .episode-summary {
+    font-size: 1.2rem;
+
+    em {
+      color: grey;
+    }
+  }
+
+}
