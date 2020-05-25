@@ -1,15 +1,10 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import { getEpisodes } from "../../store/episodes/selectors";
+import { getEpisodebyID } from "../../store/episodes/selectors";
 
 const EpisodeDetailContainer = (props) => {
-  const episodes = useSelector(getEpisodes);
-
-  const episodeData = episodes
-    .flatMap((episode) => episode.data)
-    .map((data) => data)
-    .find((item) => item.id === Number(props.match.params.id));
-
+  const episodeData = useSelector(getEpisodebyID(props.match.params.id));
+  
   return (
     <div>
       <h1>Season {episodeData.season}</h1>

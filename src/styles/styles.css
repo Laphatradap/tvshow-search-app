@@ -16,9 +16,9 @@
   overflow-y: hidden;
 }
 
-@media (min-width: 992px) {
+@media (min-width: 768px) {
   .showlist-container {
-    max-width: 1200px;
+    max-width: 992px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -59,7 +59,6 @@
     -webkit-box-direction: normal;
         -ms-flex-flow: row wrap;
             flex-flow: row wrap;
-    background-color: green;
     margin: 0 auto;
   }
 }
@@ -73,7 +72,6 @@
 
 @media (min-width: 768px) {
   .container .image-wrapper {
-    background-color: salmon;
     -webkit-box-flex: 0;
         -ms-flex: 0 1 auto;
             flex: 0 1 auto;
@@ -115,8 +113,20 @@
   padding-bottom: 20px;
 }
 
+@media (min-width: 768px) {
+  .container .text-wrapper .title {
+    font-size: 1.7rem;
+  }
+}
+
 .container .text-wrapper .details {
   font-size: 1rem;
+}
+
+@media (min-width: 768px) {
+  .container .text-wrapper .details {
+    font-size: 1.2rem;
+  }
 }
 
 .description {
@@ -126,6 +136,130 @@
   text-align: left;
   display: block;
   padding-top: 20px;
+}
+
+@media (min-width: 768px) {
+  .description {
+    font-size: 1.2rem;
+  }
+}
+
+.season-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 10%;
+          flex: 0 0 10%;
+}
+
+@media (min-width: 768px) {
+  .season-container {
+    max-width: 992px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    margin: 0 auto;
+  }
+}
+
+.season-container .season-wrapper {
+  margin: 0 auto;
+  width: 70px;
+  padding-right: 10px;
+}
+
+@media (min-width: 768px) {
+  .season-container .season-wrapper {
+    max-width: 992px;
+    margin: 0 auto;
+    width: 150px;
+    text-align: left;
+  }
+}
+
+.season-container .season-wrapper .season-number p {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+@media (min-width: 768px) {
+  .season-container .season-wrapper .season-number p {
+    font-size: 1.2rem;
+  }
+}
+
+.season-container .season-wrapper .season-number:hover {
+  -webkit-text-decoration: solid;
+          text-decoration: solid;
+  background-color: red;
+  border-radius: 0.3rem;
+}
+
+.season-container .season-wrapper .season-number:active {
+  color: white;
+  font-weight: bolder;
+  -webkit-text-decoration: solid;
+          text-decoration: solid;
+  background-color: grey;
+}
+
+.season-container .episode-wrapper {
+  padding-top: 14px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 10%;
+          flex: 1 0 10%;
+}
+
+@media (min-width: 768px) {
+  .season-container .episode-wrapper {
+    max-width: 992px;
+    width: 500px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding-top: 17px;
+  }
+}
+
+.season-container .episode-wrapper .info {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 auto;
+          flex: 0 1 auto;
+}
+
+.season-container .episode-wrapper .showTitle {
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 2px;
+  float: left;
+  width: 250px;
+  text-align: left;
+}
+
+@media (min-width: 768px) {
+  .season-container .episode-wrapper .showTitle {
+    width: 800px;
+    font-size: 1.1rem;
+    padding-bottom: 10px;
+  }
 }
 
 .Header {
@@ -186,5 +320,30 @@ body ul {
 
 body .suggestion:hover {
   background-color: red;
+}
+
+body .header {
+  font-size: 1.3rem;
+  font-weight: bolder;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+@media (min-width: 768px) {
+  body .header {
+    max-width: 992px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    font-size: 1.7rem;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    margin: 0 auto;
+  }
 }
 /*# sourceMappingURL=styles.css.map */

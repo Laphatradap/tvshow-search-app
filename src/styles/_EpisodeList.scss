@@ -1,0 +1,88 @@
+@import "./variables";
+@import "./breakpoints";
+@import "./mixins";
+
+.season-container {
+  display: flex;
+  flex-direction: row;
+  flex: 0 0 10%;
+
+  @include md {
+    max-width: $screen-lg-min;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 0 auto;
+  }
+
+  .season-wrapper {
+    margin: 0 auto;
+    width: 70px;
+    padding-right: 10px;
+
+    @include md {
+      max-width: $screen-lg-min;
+      margin: 0 auto;
+      width: 150px;
+      // background-color: green;
+      text-align: left;
+    }
+
+    .season-number {
+      p {
+        font-size: 1rem;
+        font-weight: bold;
+
+        @include md {
+          font-size: 1.2rem;
+        }
+      }
+
+      &:hover {
+        text-decoration: solid;
+        background-color: $mainColor;
+        border-radius: 0.3rem;
+      }
+
+      &:active {
+        color: $textColor;
+        font-weight: bolder;
+        text-decoration: solid;
+        background-color: grey;
+      }
+    }
+  }
+
+  .episode-wrapper {
+    padding-top: 14px;
+    flex: 1 0 10%;
+
+    @include md {
+      max-width: $screen-lg-min;
+      width: 500px;
+      display: flex;
+      justify-content: space-between;
+      padding-top: 17px;
+    }
+
+    .info {
+      flex: 0 1 auto;
+    }
+
+    .showTitle {
+      font-size: 1rem;
+      font-weight: bold;
+      padding: 2px;
+      float: left;
+      width: 250px;
+      text-align: left;
+
+      @include md {
+        width: 800px;
+        font-size: 1.1rem;
+        padding-bottom: 10px;
+      }
+    }
+  }
+}

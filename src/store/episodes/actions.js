@@ -13,7 +13,6 @@ export const fetchEpisodes = (showId) => async (dispatch) => {
     .get(`${apiUrl}/shows/${showId}/episodes`)
     .then((res) => {
       dispatch(fetchEpisodesSuccess({ data: res.data, showId }));
-      console.log("res episode", res.data)
     })
     .catch(console.error);
 };

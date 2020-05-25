@@ -1,9 +1,11 @@
 @import "./variables";
-@import "./Show";
-@import "./Header";
 @import "./breakpoints";
 @import "./mixins";
 @import "./grid";
+
+@import "./Show";
+@import "./EpisodeList";
+@import "./Header";
 
 body {
   @include sm {
@@ -39,8 +41,8 @@ body {
   // }
 
   flex-wrap: wrap;
-  width: auto!important;
-  overflow-x: hidden!important;
+  width: auto !important;
+  overflow-x: hidden !important;
   margin: 0 auto;
   padding: 20px;
   text-align: center;
@@ -78,5 +80,23 @@ body {
 
   .suggestion:hover {
     background-color: $mainColor;
+  }
+
+  .header {
+    font-size: 1.3rem;
+    font-weight: bolder;
+    display: flex;
+    justify-content: flex-start;
+
+
+    @include md {
+      max-width: $screen-lg-min;
+      display: flex;
+      font-size: 1.7rem;
+      justify-content: flex-start;
+      margin: 0 auto;
+    }
+
+
   }
 }
