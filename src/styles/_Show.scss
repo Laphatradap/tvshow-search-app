@@ -3,9 +3,8 @@
 @import "./mixins";
 
 .showlist-container {
-  @include lg {
-    max-width: $screen-xl-min;
-    // background-color: orange;
+  @include md {
+    max-width: $screen-lg-min;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-evenly;
@@ -18,138 +17,12 @@
   flex-flow: row wrap;
   justify-content: space-evenly;
   padding: 0;
-  // background-color: green;
   overflow: hidden;
   overflow-y: hidden;
 }
 
-// .container {
-//   // @include lg {
-//   //   max-width: $screen-xl-min;
-//   //   display: flex;
-//   //   flex-flow: row wrap;
-//   //   justify-content: center;
-//   //   margin: 0 auto;
-//   // }
-
-//   background-color: grey;
-//   // display: flex;
-//   // flex-flow: row wrap;
-//   // margin: 0 auto;
-//   // align-self: center;
-
-//   // max-width: $screen-md-min;
-//   width: 100%;
-//   position: relative;
-//   left: 0;
-//   margin-top: 30px;
-//   margin-bottom: 20px;
-//   align-items: center;
-//   // padding: 10px;
-//   // border-bottom: black solid 5px;
-
-//   .content-wrapper {
-//     display: inline-block;
-//     background-color: purple;
-//   }
-
-//   // .image-wrapper {
-//   //   display: inline-block;
-//   //   background-color: seagreen;
-//   // }
-
-//   .title {
-//     // text-transform: uppercase;
-//     // font-weight: bolder;
-//     // font-size: 1.5rem;
-//     // margin-left: 20px;
-//     // text-align: left;
-//     // padding: 2px;
-//     // display: inline;
-//     // align-self: center;
-//     background-color: green;
-//     // box-sizing: border-box;
-
-//     // @include lg {
-//     //   font-size: 2rem;
-//     //   display: block;
-//     // }
-//   }
-
-//   .showInfo {
-//     background-color: lightcoral;
-//     // margin-left: 20px;
-
-//     // font-size: 1.1rem;
-//     // display: inline;
-//     // align-self: center;
-//     // padding: 20px;
-
-//     // @include lg {
-//     //   display: block;
-//     //   background-color: yellow;
-//     // }
-//   }
-
-//   .showImage {
-//     // @include lg {
-//     //   height: auto;
-//     //   width: 550px;
-//     // }
-
-//     // @include md {
-//     //   height: auto;
-//     //   width: 250px
-//     // }
-
-//     // float: left;
-//     // padding-inline-end: 10px;
-//     // border-radius: 2px;
-//     // max-width: 100%;
-//     // height: auto;
-//     // margin-left: 20px;
-//     background-color: pink;
-
-//   }
-
-//   .description {
-//     background-color: red;
-//     // font-size: 1.1rem;
-//     // text-align: left;
-//     // display: block;
-
-//     // padding: 20px;
-//     // @include lg {
-//     //   width: 1000px;
-//     display: block;
-//     //   ;
-//     // }
-//   }
-// }
-
-// .container {
-//   border: 3px solid blue;
-//   padding: 20px 40px 40px;
-//   max-width: 640px;
-//   &__image {
-//       display: inline-block;
-//       vertical-align: top;
-//       width: 46%;
-//       margin: 20px 30px 0 0;
-//       background-color: red;
-//   }
-//   &__text {
-//       display: inline-block;
-//       width: 46%;
-//       background-color: seagreen;
-//       @media (max-width: 620px) {
-//           width: 100%;
-//       }
-//   }
-// }
 
 .container {
-  // background-color: red;
   display: flex;
   flex-direction: row;
 
@@ -159,33 +32,18 @@
     justify-content: center;
     align-items: flex-start;
     flex-flow: row wrap;
-    background-color: green;
     margin: 0 auto;
-    // flex: 1 0 0%;
   }
-
-  // @include md {
-  //   background-color: orange;
-  // }
-
-  // @include sm {
-  //   background-color: pink;
-  // }
 
   .image-wrapper {
     background-color: white;
     flex: 1 0 10%; //for small screen, make image smaller
 
-    // text-align: left;
     @include md {
-      // flex: 1 0 0%;
-      background-color: salmon;
-      // flex: 1 0 0%;
       flex: 0 1 auto;
     }
 
     img {
-      // vertical-align: top;
       max-width: 100%;
       max-height: 300px;
       float: left;
@@ -196,7 +54,6 @@
     margin: 0 auto;
     flex: 1 0 0%;
     padding-left: 10px;
-    // align-self: center;
     margin: auto 0;
 
     @include md {
@@ -210,20 +67,31 @@
       font-size: 1.5rem;
       font-weight: bolder;
       padding-bottom: 20px;
+
+      @include md {
+        font-size: 1.7rem;
+      }
     }
 
     .details {
       font-size: 1rem;
+
+      @include md {
+        font-size: 1.2rem;
+      }
     }
   }
 }
 
 .description {
-  // background-color: purple;
   max-width: $screen-lg-min;
   margin: 0 auto;
   font-size: 1rem;
   text-align: left;
   display: block;
   padding-top: 20px;
+
+  @include md {
+    font-size: 1.2rem;
+  }
 }

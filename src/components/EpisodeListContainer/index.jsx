@@ -40,22 +40,24 @@ const EpisodeListContainer = (props) => {
     return (
       <div key={key}>
         {key === state && (
-          <div>
+          <div className="info">
             {value.map((v) => (
-              <div>
+              <div key={v.id}>
                 {!v.image ? (
                   <div
                     key={v.id}
                     onClick={() => history.push(`/episode/${v.id}`)}
+                    className="showTitle"
                   >
-                    <div className="showTitle">{v.name}</div>
+                    <div>{v.name}</div>
                   </div>
                 ) : (
                   <div
                     key={v.id}
                     onClick={() => history.push(`/episode/${v.id}`)}
+                    className="showTitle"
                   >
-                    <div className="showTitle">{v.name}</div>
+                    <div>{v.name}</div>
                     <img src={v.image.medium} alt="showposter" />
                   </div>
                 )}
@@ -75,7 +77,7 @@ const EpisodeListContainer = (props) => {
           <div>{renderSeasonNumber}</div>
         </div>
         <div className="episode-wrapper">
-          <div className="season-info">{renderSeasonInfo}</div>
+          <div>{renderSeasonInfo}</div>
         </div>
       </div>
     </div>
