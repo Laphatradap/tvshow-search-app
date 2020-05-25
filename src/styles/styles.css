@@ -128,6 +128,91 @@
   padding-top: 20px;
 }
 
+.season-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 10%;
+          flex: 0 0 10%;
+}
+
+@media (min-width: 768px) {
+  .season-container {
+    max-width: 992px;
+    display: block;
+    text-align: left;
+    padding: 10px;
+    margin: 0 auto;
+  }
+}
+
+.season-container .season-wrapper {
+  margin: 0 auto;
+  width: 70px;
+  padding-right: 10px;
+}
+
+@media (min-width: 768px) {
+  .season-container .season-wrapper {
+    max-width: 992px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row;
+            flex-flow: row;
+    background-color: salmon;
+    margin: 0 auto;
+  }
+}
+
+.season-container .season-wrapper .season-number p {
+  font-size: 1rem;
+}
+
+.season-container .season-wrapper .season-number:hover {
+  color: red;
+  -webkit-text-decoration: solid;
+          text-decoration: solid;
+  background-color: red;
+}
+
+.season-container .season-wrapper .season-number:active {
+  color: red;
+  -webkit-text-decoration: solid;
+          text-decoration: solid;
+  background-color: red;
+}
+
+.season-container .episode-wrapper {
+  padding-top: 14px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 10%;
+          flex: 1 0 10%;
+}
+
+.season-container .season-info {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 auto;
+          flex: 0 1 auto;
+}
+
+.season-container .showTitle {
+  font-size: 1rem;
+  font-weight: bolder;
+  padding: 2px;
+  float: left;
+}
+
 .Header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -186,5 +271,10 @@ body ul {
 
 body .suggestion:hover {
   background-color: red;
+}
+
+body .header {
+  font-size: 1.4rem;
+  font-weight: bolder;
 }
 /*# sourceMappingURL=styles.css.map */
