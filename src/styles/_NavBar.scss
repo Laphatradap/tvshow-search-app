@@ -1,0 +1,35 @@
+@import "./variables";
+@import "./breakpoints";
+@import "./mixins";
+
+.topnav {
+  float: none;
+  overflow: hidden;
+
+  @include md {
+    max-width: $screen-lg-min;
+    display: flex;
+    margin: 0 auto;
+  }
+
+  .link {
+    float: left;
+    display: block;
+    text-align: center;
+    padding: 10px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bolder;
+
+    &:hover {
+      color: $mainColor;
+    }
+
+    &:active {
+      background-color: #2196f3;
+      color: white;
+    }
+  }
+
+}
+

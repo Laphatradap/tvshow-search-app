@@ -1,0 +1,22 @@
+@import "./variables";
+@import "./breakpoints";
+@import "./mixins";
+
+.search-container {
+  padding-top: 50px;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+
+  button {
+    cursor: pointer;
+
+    &:hover {
+      color: $mainColor
+    }
+
+  }
+
+
+
+}

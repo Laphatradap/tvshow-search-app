@@ -4,7 +4,6 @@ import { getTVShows } from "../../store/shows/selectors";
 import EpisodeListContainer from "../EpisodeListContainer";
 import { useParams } from "react-router-dom";
 
-// import ShowCard from "./ShowCard";
 const ShowContainer = () => {
   const params = useParams();
   const showId = parseInt(params.id);
@@ -16,22 +15,9 @@ const ShowContainer = () => {
     .map((show) => show.show)
     .find((item) => item.id === showId);
 
-  // const renderShow = (showData, CardComponent) => {
-  //   return (
-  //     <CardComponent
-  //       key={showData.id}
-  //       id={showData.id}
-  //       title={showData.name}
-  //       img={showData.image.medium}
-  //       summary={showData.summary}
-  //       rating={showData.rating.average}
-  //     />
-  //   );
-  // };
-
   return (
     <div>
-      <div className="container">
+      <div className="show-container">
         <div className="image-wrapper">
           {" "}
           {!showData.image ? (

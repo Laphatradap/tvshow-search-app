@@ -33,11 +33,11 @@ export const fetchTVShowsSuccess = (shows) => {
 //     .catch(console.error);
 // };
 
-export const fetchTVShows = () => async (dispatch) => {
+export const fetchTVShows = (query) => async (dispatch) => {
   await axios
     .get(`${apiUrl}/search/shows`, {
       params: {
-        q: "girls",
+        q: query,
       },
     })
     .then((res) => {

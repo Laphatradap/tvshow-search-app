@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { getEpisodes } from "../../store/episodes/selectors";
 import { fetchEpisodes } from "../../store/episodes/actions";
 import { useHistory } from "react-router-dom";
+import noImage from "../../assets/no-img-landscape-text.png";
 
 const EpisodeListContainer = (props) => {
   const { showId } = props;
@@ -49,6 +50,7 @@ const EpisodeListContainer = (props) => {
                     className="showTitle"
                   >
                     <div>{v.name}</div>
+                    <img src={noImage} alt="noImageFound" />
                   </div>
                 ) : (
                   <div
