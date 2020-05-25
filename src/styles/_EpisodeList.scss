@@ -1,0 +1,94 @@
+@import "./variables";
+@import "./breakpoints";
+@import "./mixins";
+
+.season-container {
+  // background-color: grey;
+  // display: inline-block;
+  // text-align: left;
+  display: flex;
+  flex-direction: row;
+  flex: 0 0 10%;
+  // justify-content: space-around;
+
+
+  @include md {
+    max-width: $screen-lg-min;
+    display: block;
+    text-align: left;
+    // justify-content: left;
+    // align-items: flex-start;
+    // flex-flow: row;
+    // background-color: blue;
+    padding: 10px;
+    margin: 0 auto;
+  }
+
+  .season-wrapper {
+    // display: flex;
+    // flex-direction: row;
+    // display: inline-block;
+    // display: flex;
+    // flex-direction: row wrap;
+    // flex: 1 0 0%;
+    // background-color: blue;
+    margin: 0 auto;
+    width: 70px;
+    padding-right: 10px;
+    ;
+    // justify-content: space-between;
+
+    @include md {
+      max-width: $screen-lg-min;
+      display: flex;
+      // justify-content: center;
+      align-items: flex-start;
+      flex-flow: row;
+      background-color: salmon;
+      margin: 0 auto;
+      // justify-content: left;
+    }
+
+    .season-number {
+      p {
+        font-size: 1rem;
+      }
+
+      &:hover {
+        color: $mainColor;
+        text-decoration: solid;
+        background-color: red;
+      }
+
+      &:active {
+        color: $mainColor;
+        text-decoration: solid;
+        background-color: red;
+      }
+    }
+  }
+
+  .episode-wrapper {
+    // display: flex;
+    // flex-direction: row;
+    padding-top: 14px;
+    // background-color: green;
+    flex: 1 0 10%;
+
+  }
+
+  .season-info {
+    flex: 0 1 auto;
+  }
+
+ 
+
+  .showTitle {
+    font-size: 1rem;
+    font-weight: bolder;
+    padding: 2px;
+    float: left;
+  }
+
+
+}

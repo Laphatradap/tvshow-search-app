@@ -48,7 +48,7 @@ const ShowContainer = () => {
         </div>
         <div className="text-wrapper">
           <div className="title">{showData.name}</div>
-          <div className="details">
+          <div className="details" key={showData.id}>
             {showData.language}
             {" | "}
             {showData.genres.map((genre) => (

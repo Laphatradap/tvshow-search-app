@@ -41,7 +41,6 @@ export const fetchTVShows = () => async (dispatch) => {
       },
     })
     .then((res) => {
-      console.log("res show", res.data)
       dispatch(fetchTVShowsSuccess(res.data));
     })
     .catch(console.err);

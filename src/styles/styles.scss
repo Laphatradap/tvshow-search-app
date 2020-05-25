@@ -1,9 +1,11 @@
 @import "./variables";
-@import "./Show";
-@import "./Header";
 @import "./breakpoints";
 @import "./mixins";
 @import "./grid";
+
+@import "./Show";
+@import "./EpisodeList";
+@import "./Header";
 
 body {
   @include sm {
@@ -78,5 +80,10 @@ body {
 
   .suggestion:hover {
     background-color: $mainColor;
+  }
+
+  .header {
+    font-size: 1.4rem;
+    font-weight: bolder;
   }
 }
