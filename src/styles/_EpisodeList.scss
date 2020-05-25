@@ -3,92 +3,86 @@
 @import "./mixins";
 
 .season-container {
-  // background-color: grey;
-  // display: inline-block;
-  // text-align: left;
   display: flex;
   flex-direction: row;
   flex: 0 0 10%;
-  // justify-content: space-around;
-
 
   @include md {
     max-width: $screen-lg-min;
-    display: block;
-    text-align: left;
-    // justify-content: left;
-    // align-items: flex-start;
-    // flex-flow: row;
-    // background-color: blue;
-    padding: 10px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: flex-start;
     margin: 0 auto;
   }
 
   .season-wrapper {
-    // display: flex;
-    // flex-direction: row;
-    // display: inline-block;
-    // display: flex;
-    // flex-direction: row wrap;
-    // flex: 1 0 0%;
-    // background-color: blue;
     margin: 0 auto;
     width: 70px;
     padding-right: 10px;
-    ;
-    // justify-content: space-between;
 
     @include md {
       max-width: $screen-lg-min;
-      display: flex;
-      // justify-content: center;
-      align-items: flex-start;
-      flex-flow: row;
-      background-color: salmon;
       margin: 0 auto;
-      // justify-content: left;
+      width: 150px;
+      // background-color: green;
+      text-align: left;
     }
 
     .season-number {
       p {
         font-size: 1rem;
+        font-weight: bold;
+
+        @include md {
+          font-size: 1.2rem;
+        }
       }
 
       &:hover {
-        color: $mainColor;
         text-decoration: solid;
-        background-color: red;
+        background-color: $mainColor;
+        border-radius: 0.3rem;
       }
 
       &:active {
-        color: $mainColor;
+        color: $textColor;
+        font-weight: bolder;
         text-decoration: solid;
-        background-color: red;
+        background-color: grey;
       }
     }
   }
 
   .episode-wrapper {
-    // display: flex;
-    // flex-direction: row;
     padding-top: 14px;
-    // background-color: green;
     flex: 1 0 10%;
 
+    @include md {
+      max-width: $screen-lg-min;
+      width: 500px;
+      display: flex;
+      justify-content: space-between;
+      padding-top: 17px;
+    }
+
+    .info {
+      flex: 0 1 auto;
+    }
+
+    .showTitle {
+      font-size: 1rem;
+      font-weight: bold;
+      padding: 2px;
+      float: left;
+      width: 250px;
+      text-align: left;
+
+      @include md {
+        width: 800px;
+        font-size: 1.1rem;
+        padding-bottom: 10px;
+      }
+    }
   }
-
-  .season-info {
-    flex: 0 1 auto;
-  }
-
- 
-
-  .showTitle {
-    font-size: 1rem;
-    font-weight: bolder;
-    padding: 2px;
-    float: left;
-  }
-
-
 }

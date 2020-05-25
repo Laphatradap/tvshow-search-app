@@ -41,8 +41,8 @@ body {
   // }
 
   flex-wrap: wrap;
-  width: auto!important;
-  overflow-x: hidden!important;
+  width: auto !important;
+  overflow-x: hidden !important;
   margin: 0 auto;
   padding: 20px;
   text-align: center;
@@ -83,7 +83,20 @@ body {
   }
 
   .header {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     font-weight: bolder;
+    display: flex;
+    justify-content: flex-start;
+
+
+    @include md {
+      max-width: $screen-lg-min;
+      display: flex;
+      font-size: 1.7rem;
+      justify-content: flex-start;
+      margin: 0 auto;
+    }
+
+
   }
 }
