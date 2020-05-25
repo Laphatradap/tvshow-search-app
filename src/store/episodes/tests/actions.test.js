@@ -24,8 +24,8 @@ describe("#fetchEpisodesSuccess", () => {
 describe("#fetchEpisode", () => {
   describe("when called", () => {
     test("should dispatch an action FETCH_EPISODES_SUCESS", async () => {
-      const fakeEpisodes = [{}, {}];
-      const response = { data: fakeEpisodes };
+      const response = { data: [{}, {}] };
+      const fakeEpisodes = { data: response.data, showId: "test_showId" };
 
       axios.get.mockImplementationOnce(() => Promise.resolve(response));
       // await expect(fetchEpisodes('showId')).resolve.toEqual(response)

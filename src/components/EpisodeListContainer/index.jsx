@@ -10,11 +10,10 @@ const EpisodeListContainer = (props) => {
   const episodeList = useSelector(getEpisodes);
   const history = useHistory();
   const [state, setState] = useState("1");
-  console.log("OUTPUT: EpisodeListContainer -> state", state);
 
   useEffect(() => {
     dispatch(fetchEpisodes(showId));
-  }, [dispatch]);
+  }, [dispatch, showId]);
 
   if (!episodeList) return "Loading...";
 
