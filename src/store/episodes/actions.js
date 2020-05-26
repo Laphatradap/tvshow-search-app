@@ -3,7 +3,7 @@ import axios from "axios";
 
 export const fetchEpisodesSuccess = (episodes) => {
   return {
-    type: "FETCH_EPISODES_SUCESS",
+    type: "FETCH_EPISODES_SUCCESS",
     episodes,
   };
 };
@@ -16,4 +16,3 @@ export const fetchEpisodes = (showId) => async (dispatch) => {
     })
     .catch(console.error);
 };
-

@@ -26,9 +26,6 @@ const ShowContainer = () => {
             <img
               src={showData.image.medium}
               alt="showposter"
-              // className="container__image"
-              // height="115px"
-              // width="169px"
             />
           )}
         </div>

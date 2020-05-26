@@ -5,15 +5,12 @@ import noImage from "../../assets/no-img-landscape-text.png";
 
 const EpisodeDetailContainer = (props) => {
   const episodeData = useSelector(getEpisodebyID(props.match.params.id));
-  console.log("OUTPUT: EpisodeDetailContainer -> episodeData", episodeData);
 
   return (
     <div>
       <div className="episode-container">
         <div className="header">Season {episodeData.season}</div>
-
         <div className="episode-title">{episodeData.name}</div>
-
         <div className="episode-image-wrapper">
           {!episodeData.image ? (
             <a href={episodeData.url}>
