@@ -10,7 +10,7 @@ const ShowListContainer = () => {
   const history = useHistory();
 
   useEffect(() => {
-    dispatch(fetchTVShows("powerpuff girls"));
+    dispatch(fetchTVShows());
   }, [dispatch]);
 
   if (!tvshows) return "Loading...";

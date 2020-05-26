@@ -22,10 +22,10 @@
     padding-right: 10px;
 
     @include md {
-      max-width: $screen-lg-min;
-      margin: 0 auto;
+      max-width: $screen-md-min;
+      display: flex;
+      align-items: flex-start;
       width: 150px;
-      text-align: left;
     }
 
     .season-number {
@@ -59,9 +59,9 @@
 
     @include md {
       max-width: $screen-lg-min;
-      width: 500px;
+      width: 300px;
       display: flex;
-      justify-content: space-between;
+      flex: 1 0 auto;
       padding-top: 17px;
     }
 
