@@ -1,68 +1,51 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## TVSHOWLAND
 
-In the project directory, you can run:
+### Installation
+- `git clone git@github.com:Laphatradap/rtl-tvshowapp-client.git`
+- `cd rtl-tvshowapp-client`
+- `npm install`
+- `npm run start`
 
-### `yarn start`
+### Technologies used
+- [React](./src/components/EpisodeListContainer/index.jsx)
+- [Redux-Thunk](./src/store/episodes/actions.js)
+- [Redux-Persist](./src/store/store.js)
+- [Sass](./src/styles/styles.scss)
+- [Axios](./src/store/shows/actions.js)
+- [Jest](./src/store/episodes/tests/actions.test.js)
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Features implemented
+- A Homepage that displays shows cover images with search box
+  - With search box, the user can search for a tvshow by its name.
+- A TV show page displays following:
+  - Show title
+  - Show description
+  - Show cover image
+  - Show language
+  - Show genres
+  - Show episode list, rendering based on seasons. When clicking on the cover image, it will direct to the episode detail page for that specific episode
+- A episode detail page displays the following:
+  - Episode title
+  - Epiosde summary
+  - Episode cover image, when clicking on the cover image, it will direct to the www.tvmaze.com for that specific episode
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+*If any show or episodes' photo is missing, it is replaced by "no image yet photo".*
 
-### `yarn test`
+### Styling with Sass
+- [Mobile-first approach](./src/styles/_EpisodeList.scss)
+- On medium-sized screens, the`$screen-md-min: 768px` will overrides the small styles.
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Testing
+- Focus on testing redux [actions](./src/store/shows/tests/actions.test.js) and [reducers](./src/store/shows/tests/reducer.test.js)
+- To run the test: `npm run test` 
 
-### `yarn build`
+### Git usage
+- [git branches and commit messages](https://github.com/Laphatradap/rtl-tvshowapp-client/commits/master)
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+### Create React App
+- This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+**Any feedback to improve my code or git usage: [please drop me a message](https://www.linkedin.com/in/laphatradaphusri/)!**
