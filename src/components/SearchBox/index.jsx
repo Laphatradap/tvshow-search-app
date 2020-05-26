@@ -18,7 +18,7 @@ const SearchBox = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
     dispatch(fetchTVShows(state.search));
-    setState({});
+    setState({search: ""});
   };
 
   return (
