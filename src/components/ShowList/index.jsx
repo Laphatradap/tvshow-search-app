@@ -13,7 +13,7 @@ const ShowListContainer = () => {
     dispatch(fetchTVShows("girls"));
   }, [dispatch]);
 
-  if (!tvshows) return "Loading...";
+  if (!tvshows) return "Search your show!";
 
   return (
     <div>
