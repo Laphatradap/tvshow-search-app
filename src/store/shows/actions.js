@@ -9,6 +9,7 @@ export const fetchTVShowsSuccess = (shows) => {
 };
 
 export const fetchTVShows = (query) => async (dispatch) => {
+  console.log("OUTPUT: fetchTVShows -> query", query)
   await axios
     .get(`${apiUrl}/search/shows`, {
       params: {

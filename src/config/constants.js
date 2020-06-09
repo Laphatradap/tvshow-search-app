@@ -1,1 +1,1 @@
-export const apiUrl = process.env.API_URL || "http://api.tvmaze.com";
+export const apiUrl = process.env.API_URL || "https://api.tvmaze.com";
