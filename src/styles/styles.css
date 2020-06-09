@@ -144,6 +144,12 @@
   }
 }
 
+.loadingMsg {
+  margin-top: 10px;
+  color: green;
+  font-size: 2rem;
+}
+
 .season-container {
   display: -webkit-box;
   display: -ms-flexbox;
