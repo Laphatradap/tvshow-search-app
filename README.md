@@ -40,7 +40,9 @@ _If any show or episodes' photo is missing, it is replaced by "no image yet phot
 
 ![showHomepage](./src/assets/screenshots/tvshowsearch3.png)
 ![showDetail](./src/assets/screenshots/tvshowsearch.png)
+![episodeList](./src/assets/screenshots/tvshowsearch4.png)
 ![episodeDetail](./src/assets/screenshots/tvshowsearch2.png)
+
 
 ### Styling with Sass
 
