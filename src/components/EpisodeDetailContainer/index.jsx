@@ -25,17 +25,13 @@ const EpisodeDetailContainer = (props) => {
 
         <div className="episode-summary">
           {!episodeData.summary ? (
-            <>
               <em>
                 We don't have a summary for {episodeData.name} yet.
               </em>
-            </>
           ) : (
-            <>
               <div
                 dangerouslySetInnerHTML={{ __html: episodeData.summary }}
               ></div>
-            </>
           )}
         </div>
       </div>
